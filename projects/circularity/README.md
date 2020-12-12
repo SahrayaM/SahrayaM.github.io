@@ -28,20 +28,26 @@ Also at: http://bit.ly/op-spark-circularity
 	- [TODO 9 : Move all our circles and keep them all in bounds](#todo-9--move-all-our-circles-and-keep-them-all-in-bounds)
 	- [TODO 10 : Go Live](#todo-10--go-live)
 
-## Prerequisites
-* Make sure your github account is linked to Greenlight
-* You have a coding workspace. You can follow instructions found [here](https://github.com/OperationSpark/github-ide-setup/blob/master/README.md) to create an online coding workspace in Codenvy or offline using VS Code.
-* You have the `os` tool installed. To verify if you have the `os` tool installed, go to the bash terminal in your coding workspace and type in the command: `os --version`. If you receive an error that says, `os install command not found` the opspark CLI is not installed. To install it, enter the command `npm intall -g opspark` in your bash terminal. When the installation is complete try `os --version` again.
-
 # Very Important
 ## Installation 
+
+### Make sure you can install Circularity
+Go to <a href="https://gitpod.io/access-control"> Access Control </a> and check all of the boxes under Github, then save your preferences (if they are all already checked, then you can skip this step).
+
 ### Copy and paste the following commands into the bash terminal, then hit ENTER
+
+**NOTE:** Only the first command is guaranteed to display output. If there is an error on this command, check with your instructor. The second command will often give an error, but that is fine. The rest of the commands should display nothing after being entered.
 
 * git clone https://github.com/operationspark/circularity
 * mkdir projects/circularity
 * rm -rf circularity/.git*
 * cp -r circularity/* projects/circularity/.
 * rm -rf circularity
+
+#### Note: If already reinstalled but not working, paste the following commands instead:
+* cd projects/circularity
+* npm install -g opspark
+* bower install
 
 ## Overview
 
@@ -61,18 +67,11 @@ Some concepts you'll practice and learn:
 
 # Lesson Steps
 
-## Run the program
-Open the `index.html` file and follow the instructions below to run your program:
-- **Cloud9**: at the top of your window, click the **Preview** button. Then, in the top right corner of the preview window, click **Pop Out Into New Window**
-- **Codenvy**: right click on the `index.html` file in your file system and click **Preview**
-
-
-
 # TODO 1 : Declare Our Variables
 
 Start by opening the `js/init.js` file. We will do all our coding in this file. 
 
-**FND:** The `PROGRAM SETUP` section of the program. `TODO 1` will be below.
+**FIND:** The `PROGRAM SETUP` section of the program. `TODO 1` will be below.
 
 The goal of this project is to create 100 animated circles. Before we get ahead of ourselves, let's create one circle. Declare a variable to hold that circle (we will deal with initializing it later). Also we want to create an empty array to hold our circles, more on that later:
 
@@ -173,6 +172,13 @@ function update() {
 	physikz.updatePosition( /* Your Bracket Notation HERE */ );
 }
 ```
+
+
+## Suggestion
+You can make your circles move more quickly (once they are moving) by changing the `physikz.addRandomVelocity` line to have two extra arguments. This will make testing future steps easier.
+
+Back up in the `drawCircle()` function, try changing that line to be `physikz.addRandomVelocity(circle, canvas, 10, 10);`. If you want the circles to go faster, put bigger numbers. If you want them to go slower, put smaller ones.
+
 
 # TODO 5 : Keep your circles in the screen 
 
@@ -343,7 +349,7 @@ Awesome job! Now that we have our loop in place and we are iterating over our `c
 
 Congrats!
 
-### TODO 10 : Go Live
+## TODO 10 : Go Live
 
 In your bash terminal, enter the following commands, pressing ENTER after each one:
 
