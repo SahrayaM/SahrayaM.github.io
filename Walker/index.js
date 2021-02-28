@@ -26,7 +26,7 @@ var speedY = 0; //the speed for the box along the y-axis
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
   $(document).on('keydown', handleKeyDown);                           // change 'eventType' to the type of event you want to handle
-
+ $(document).on('keyup', handleKeyUp);  
   ////////////////////////////////////////////////////////////////////////////////
   ///////////////////////// CORE LOGIC ///////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
@@ -46,19 +46,32 @@ var speedY = 0; //the speed for the box along the y-axis
   */
   function handleKeyDown(event) {
        if (event.which === KEY.LEFT) {
-    speedX = -5;
+    speedX = 5;
   }
    else if (event.which === KEY.RIGHT) {
-    speedx = -5;
+    speedX = 5;
   }
   else if (event.which === KEY.UP) {
-    speedX = -5;
+    speedX = 5;
   }
    else if (event.which === KEY.DOWN) {
-    speedX = -5;
+    speedX = 5;
   }
   }
-
+function handleKeyUp(){
+  if (event.which === KEY.LEFT) {
+    speedX = 0;
+  }
+   else if (event.which === KEY.RIGHT) {
+    speedX = 0;
+  }
+  else if (event.which === KEY.UP) {
+    speedX = 0;
+  }
+   else if (event.which === KEY.DOWN) {
+    speedX = 0;
+}
+}
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
@@ -67,8 +80,9 @@ positionX += speedX;
 positionY += speedY;
 }
   function redrawGameItem(){
-$("#GameItem").css("left", positionX); 
-$("#GameItem").css("left", positionY); 
+$("#gameItem").css("left", positionX);
+$("#gameItem").css("top", positionY);
+
   }
 
   function endGame() {
