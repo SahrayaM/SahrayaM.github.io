@@ -46,30 +46,38 @@ var speedY = 0; //the speed for the box along the y-axis
   */
   function handleKeyDown(event) {
        if (event.which === KEY.LEFT) {
-    speedX = 5;
+    speedX = -5;
+    
   }
    else if (event.which === KEY.RIGHT) {
     speedX = 5;
+    
   }
   else if (event.which === KEY.UP) {
-    speedX = 5;
+    
+    speedY= -5;
   }
    else if (event.which === KEY.DOWN) {
-    speedX = 5;
+    
+    speedY = 5;
   }
   }
-function handleKeyUp(){
+function handleKeyUp(event){
   if (event.which === KEY.LEFT) {
     speedX = 0;
+    speedY = 0;
   }
    else if (event.which === KEY.RIGHT) {
     speedX = 0;
+    speedY = 0;
   }
   else if (event.which === KEY.UP) {
     speedX = 0;
+    speedY = 0;
   }
    else if (event.which === KEY.DOWN) {
     speedX = 0;
+    speedY = 0;
 }
 }
   ////////////////////////////////////////////////////////////////////////////////
