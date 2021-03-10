@@ -1,0 +1,22 @@
+1.) The gameplay will consist of two side platforms reflecting a ball around. When the ball touches the outside of the board without touching the platform, the game ends.
+
+2.) The side platforms must move by the players control, and the ball must be in motion at all times.
+
+3.) The ball must hit the side of the board and not be in contact with the controlled platforms to end the game.
+
+4.) If statements like if the ball hits the edge of the board the game must end/restart.
+
+5.) The side platorms, the ball, and the screen/board.
+
+6.) The screen/board.
+
+7.) The side platfroms and the ball.
+
+8.) The ball speed and location it can go; and the platforms speed and making sure it only goes in vertical directions.
+
+9.) Keyboard events.
+
+10.) The side platforms will only move if the keys are pressed.
+
+11.) When the player pushes the up arrow or down arrow, the side platforms will take action and move in the same direction. When the player lets go of said keys, the side platform will seize motion. (continuation below)
+When the animated ball collides with the platforms, it reflects into the opposite direction. The ball is allowed to bounce around the top and bottom, but not on the sides of the screen/board, since this will result in a game over. 

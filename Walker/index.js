@@ -65,18 +65,18 @@ var speedY = 0; //the speed for the box along the y-axis
 function handleKeyUp(event){
   if (event.which === KEY.LEFT) {
     speedX = 0;
-    speedY = 0;
+    
   }
    else if (event.which === KEY.RIGHT) {
+    
     speedX = 0;
-    speedY = 0;
   }
   else if (event.which === KEY.UP) {
-    speedX = 0;
+   
     speedY = 0;
   }
    else if (event.which === KEY.DOWN) {
-    speedX = 0;
+    
     speedY = 0;
 }
 }
