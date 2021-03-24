@@ -65,13 +65,13 @@ ball.speedX = 5;
   */
   function handleKeydown(event) {
     if (event.which === KEY.DOWN) {
-    speedY = 5;
+    rightPaddle.speedY = 5;
     
   }
    
   else if (event.which === KEY.UP) {
     
-    speedY= -5;
+    rightPaddle.speedY= -5;
   }
  
    
