@@ -11,7 +11,8 @@ function runProgram(){
   var FRAME_RATE = 60;
   var FRAMES_PER_SECOND_INTERVAL = 1000 / FRAME_RATE;
      var KEY = {
-  
+  "W": 38,
+  "S": 40,
   "UP": 38,
   "DOWN": 40
 }
@@ -30,6 +31,10 @@ function runProgram(){
  
   return revealInfo;
 }
+
+ top = parseFloat($($id).css('top'));
+
+left = parseFloat($($id).css('left'));
 
 ///Creating Variables///
 var leftPaddle = factory("#leftPaddle");
@@ -77,8 +82,13 @@ ball.speedX = 5;
     rightPaddle.speedY= -5;
   }
  
-   
+   else if (event.which === KEY.W){
+       leftPaddle.speedY = -5;
+   }
 
+   else if (event.which === KEY.S){
+       leftPaddle.speedY = 5;
+   }
   }
 
   ////////////////////////////////////////////////////////////////////////////////
