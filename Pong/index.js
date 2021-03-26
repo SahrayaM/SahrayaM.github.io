@@ -18,16 +18,19 @@ function runProgram(){
 
 
   // Game Item Objects
-function factory($id){
-    var newObject = {
-        id = $id,
-        x: 20,
-        y: 20,
-        speedX = 0,
-        speedY = 0,
-
-    }
+  function factory($id){
+  var revealInfo = {}
+  revealInfo.id = $id;
+  revealInfo.x = $($id).css('left');
+  revealInfo.y = $($id).css('top');
+  revealInfo.width = $($id).width();
+  revealInfo.height = $($id).height();
+  revealInfo.speedX = 0;
+  revealInfo.speedY = 0;
+ 
+  return revealInfo;
 }
+
 ///Creating Variables///
 var leftPaddle = factory("#leftPaddle");
 var rightPaddle = factory("#rightPaddle");
