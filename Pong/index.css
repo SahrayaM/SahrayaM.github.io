@@ -1,18 +1,20 @@
 
 body {
-  background-color: rgb(92, 19, 126);
+  background-color: rgb(0, 0, 0);
 }
 
 #board {
   width: 440px;
   height: 440px;
   border: 1px solid rgb(255, 255, 255);
-  background-color: black;
+  background: url('https://www.innovationnewsnetwork.com/wp-content/uploads/2021/02/Primordial-galaxy-696x392.jpg');
+ background-size: 100%;
+  
   position: relative;
 }
 #leftPaddle {
   /* appearance */
-  background-color: rgb(92, 64, 192);
+  background-color: rgb(183, 155, 211);
   width: 20px;
   height: 80px;
   border-radius: 2px;
