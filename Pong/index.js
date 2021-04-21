@@ -11,8 +11,8 @@ function runProgram(){
   var FRAME_RATE = 60;
   var FRAMES_PER_SECOND_INTERVAL = 1000 / FRAME_RATE;
      var KEY = {
-  "W": 38,
-  "S": 40,
+  "W": 87,
+  "S": 83,
   "UP": 38,
   "DOWN": 40
 }
@@ -66,7 +66,9 @@ ball.speedX = 5;
   updatePosition(ball);
   updatePosition(leftPaddle);
   updatePosition(rightPaddle);
-  ballCollision();
+  ballBoardCollision();
+  paddleBallCollision();
+  ballMovement();
   }
   
   /* 
@@ -115,24 +117,22 @@ ball.speedX = 5;
   ///example///
   
   ///Ball Collision Function///
-function ballCollision(){
-    
-    
-    // TODO: Return true if they are overlapping, false otherwise
- if (ball.y > rightPaddle.y){
-     ball.speedY *= -1;
- }
- else if (ball.x > rightPaddle.x){
-     ball.speedX *= -1;
- }
-    else if (ball.y < leftPaddle.y){
-     ball.speedY *= -1;
- }
- else if (ball.x < leftPaddle.x){
-     ball.speedX *= -1;
- }
+function ballBoardCollision(){
+    if (ball.x < 0 || ball.x > board.width) {
+        ball.speedX *= -1;
+    }
+    else if (ball.y < 0 || ball.y > board.height) {
+        ball.speedY *= -1;
+    }
+ 
 }
 
+function ballMovement(){
+ball.id = id,
+ball.x = randomLocation
+}
+ 
+ 
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
@@ -162,3 +162,4 @@ function ballCollision(){
   }
   
 }
+

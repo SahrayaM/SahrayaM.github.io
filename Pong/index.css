@@ -8,7 +8,7 @@ body {
   height: 440px;
   border: 1px solid rgb(255, 255, 255);
   background: url('https://www.innovationnewsnetwork.com/wp-content/uploads/2021/02/Primordial-galaxy-696x392.jpg');
- background-size: 100%;
+ background-size: 200%;
   
   position: relative;
 }
@@ -42,11 +42,11 @@ body {
 
 #ball {
   /* appearance */
-  background-color: rgb(192, 255, 18);
+  background-color: rgb(228, 233, 209);
   width: 20px;
   height: 20px;
-  border-radius: 100px;
- box-shadow: 0px 0px 30px 20px rgb(211, 192, 23);
+  border-radius: 20px;
+ box-shadow: 0px 0px 30px 20px rgb(215, 216, 203);
   /* positioning */
   position: absolute;
   top: 20px;
