@@ -28,7 +28,7 @@ function runProgram(){
   revealInfo.height = $($id).height();
   revealInfo.speedX = 0;
   revealInfo.speedY = 0;
-
+  
 
   return revealInfo;
 }
@@ -67,8 +67,7 @@ ball.speedX = 5;
   updatePosition(leftPaddle);
   updatePosition(rightPaddle);
   ballBoardCollision();
-  paddleBallCollision();
-  ballMovement();
+  
   }
   
   /* 
@@ -127,11 +126,7 @@ function ballBoardCollision(){
  
 }
 
-function ballMovement(){
-ball.id = id,
-ball.x = randomLocation
-}
- 
+
  
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
