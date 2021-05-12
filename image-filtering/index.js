@@ -33,8 +33,8 @@ for (var x = 0; x < image.length; x++){
 
 
 // TODO 2 & 4: Create filter functions
-function reddify (){
 
+function reddify (){
+  rgbNumbers[RED] = 255;
 }
-reddify(image);
 // CHALLENGE code goes below here
