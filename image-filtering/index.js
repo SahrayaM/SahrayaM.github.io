@@ -4,7 +4,7 @@ $(document).ready(function(){
     const $display = $('#display');
 
     // TODO: Call your apply function(s) here
-applyFilter();
+applyFilter(reddify);
 
 
 
@@ -17,12 +17,12 @@ applyFilter();
 /////////////////////////////////////////////////////////
 
 // TODO 1 & 3: Create the applyFilter function here
-function applyFilter(){
+function applyFilter(filterFunction){
 for (var x = 0; x < image.length; x++){
     for (var y = 0; y < image[x].length; y++){
   var rgbString = image[x][y];
   var rgbNumbers = rgbStringToArray(rgbString);
-  rgbNumbers[RED] = 255;
+  filterFunction(rgbNumbers);
   rgbString = rgbArrayToString(rgbNumbers);
   image[x][y] = rgbString;
     }
