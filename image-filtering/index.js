@@ -5,7 +5,8 @@ $(document).ready(function(){
 
     // TODO: Call your apply function(s) here
 applyFilter(reddify);
-
+applyFilter(decreaseBlue);
+applyFilter(increaseGreenByBlue);
 
 
 
@@ -34,7 +35,17 @@ for (var x = 0; x < image.length; x++){
 
 // TODO 2 & 4: Create filter functions
 
-function reddify (){
-  rgbNumbers[RED] = 255;
+function reddify (Yeehaw){
+  Yeehaw[RED] = 255;
 }
+function decreaseBlue (Yeehaw){
+    var blue  = Math.max( 0, Yeehaw[BLUE] - 30);
+    return blue;
+    
+}
+function increaseGreenByBlue (Yeehaw){
+    var green = Math.min(Yeehaw[BLUE] + Yeehaw[GREEN], 255);
+    return green; 
+}
+
 // CHALLENGE code goes below here
