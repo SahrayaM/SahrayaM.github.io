@@ -4,10 +4,10 @@ $(document).ready(function(){
     const $display = $('#display');
 
     // TODO: Call your apply function(s) here
-applyFilter(reddify);
+ applyFilter(reddify);
 applyFilter(decreaseBlue);
-applyFilter(increaseGreenByBlue);
-
+ applyFilter(increaseGreenByBlue);
+applyFilter(increaseBlue);
 
 
     render($display, image);
@@ -31,21 +31,25 @@ for (var x = 0; x < image.length; x++){
 }
 
 // TODO 5: Create the applyFilterNoBackground function
-
-
+function applyFilterNoBackground(){
+ 
+  }
 // TODO 2 & 4: Create filter functions
 
 function reddify (Yeehaw){
   Yeehaw[RED] = 255;
 }
 function decreaseBlue (Yeehaw){
-    var blue  = Math.max( 0, Yeehaw[BLUE] - 30);
-    return blue;
+    Yeehaw[BLUE]  = Math.max( 0, Yeehaw[BLUE] - 70);
+    
     
 }
 function increaseGreenByBlue (Yeehaw){
-    var green = Math.min(Yeehaw[BLUE] + Yeehaw[GREEN], 255);
-    return green; 
+    Yeehaw[GREEN] = Math.min(Yeehaw[BLUE] + Yeehaw[GREEN], 255);
+    
+}
+function increaseBlue (Yeehaw){
+    Yeehaw[BLUE] = Math.max(0, Yeehaw[BLUE] + 70);
 }
 
 // CHALLENGE code goes below here

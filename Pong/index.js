@@ -41,6 +41,7 @@ var rightPaddle = factory("#rightPaddle");
 var ball = factory("#ball");
 var board = factory("#board");
 
+
 // Default speeds //
 ball.speedX = 5;
 
@@ -112,8 +113,52 @@ ball.speedX = 5;
        leftPaddle.speedY = 0;
    }
   }
+//Score track function//
+function keepTrack(obj){
+     if (ball.x < 0 || ball.x > board.width) {
+         for (var q = 0; q <= 10; q++){
 
-  ///example///
+         }
+
+
+     }
+}
+  ///PlayerScores Function///
+  function playerScores($id){
+  var revealInfo = {}
+  revealInfo.id = $id;
+  revealInfo.x = $($id).css('left');
+  revealInfo.y = $($id).css('top');
+  revealInfo.width = $($id).width();
+  revealInfo.height = $($id).height();
+  revealInfo.speedX = 0;
+  revealInfo.speedY = 0;
+ 
+  return revealInfo;
+}
+
+
+
+// 2) create your objects here
+
+var obj1 = playerScores("#scorePlayer1");
+var obj2 = playerScores("#scorePlayer2");
+
+/*
+  Below here is testing code. If you did
+  everything properly up above, then
+  both objects should have their
+  information displayed within them
+*/
+
+function displayData(obj){
+  $(obj.id).append($("<p>").text(" Player Score: "));
+  $(obj.id).append($("<p>").text("  " ));
+  
+}
+
+displayData(obj1);
+displayData(obj2);
   
   ///Ball Collision Function///
 function ballBoardCollision(){
@@ -125,7 +170,12 @@ function ballBoardCollision(){
     }
  
 }
-
+//Paddle Collision//
+function paddleCollide(){
+    if (ball.x > 0 || ball.x <= leftPaddle.width){
+        ball.speedX *= -1;
+    }
+}
 
  
   ////////////////////////////////////////////////////////////////////////////////
