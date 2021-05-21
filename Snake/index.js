@@ -65,7 +65,7 @@ updatePosition(snakehead);
      "S": 83,
      "D": 68
  }
-  function handleDown(event) {
+  function handleKeyDown(event) {
  if (event.which === KEY.W){
      snakehead.speedY = -5;
  }
