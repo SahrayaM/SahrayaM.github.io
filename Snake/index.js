@@ -53,7 +53,7 @@ snakehead.speedX = 5;
   */
   function newFrame() {
    moveObject(snakehead);
-
+updatePosition(snakehead);
   }
   
   /* 
