@@ -35,7 +35,7 @@ var apple = factory("#apple");
 
 //default speed
 
-snakeHead.speedX = 5;
+snakehead.speedX = 5;
 
 
 
@@ -59,11 +59,11 @@ snakeHead.speedX = 5;
   /* 
   Called in response to events.
   */
- KEY = {
-     W: 87,
-     A: 65,
-     S: 83,
-     D: 68
+ var KEY = {
+     "W": 87,
+     "A": 65,
+     "S": 83,
+     "D": 68
  }
   function handleDown(event) {
  if (event.which === KEY.W){
