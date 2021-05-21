@@ -7,7 +7,7 @@ $(document).ready(function(){
  applyFilter(reddify);
 applyFilter(decreaseBlue);
  applyFilter(increaseGreenByBlue);
-applyFilter(increaseBlue);
+//applyFilter(increaseBlue);
 applyFilterNoBackground(reddify);
 applyFilterNoBackground(increaseBlue);
 
@@ -53,7 +53,7 @@ function applyFilterNoBackground(filterFunction){
 // TODO 2 & 4: Create filter functions
 
 function reddify (Yeehaw){
-  Yeehaw[RED] = 255;
+  Yeehaw[RED] += 64;
 }
 function decreaseBlue (Yeehaw){
     Yeehaw[BLUE]  = Math.max( 0, Yeehaw[BLUE] - 70);
@@ -65,7 +65,7 @@ function increaseGreenByBlue (Yeehaw){
     
 }
 function increaseBlue (Yeehaw){
-    Yeehaw[BLUE] = Math.max(0, Yeehaw[BLUE] + 70);
+    Yeehaw[BLUE] = Math.max(0, Yeehaw[BLUE] + 250);
 }
 
 // CHALLENGE code goes below here
