@@ -68,6 +68,7 @@ ball.speedX = 5;
   updatePosition(leftPaddle);
   updatePosition(rightPaddle);
   ballBoardCollision();
+  paddleCollide();
   
   }
   
@@ -172,9 +173,16 @@ function ballBoardCollision(){
 }
 //Paddle Collision//
 function paddleCollide(){
-    if (ball.x > 0 || ball.x <= leftPaddle.width){
+    if (ball.x > leftPaddle.x && ball.x < leftPaddle.width){
         ball.speedX *= -1;
     }
+    else if(ball.y > leftPaddle.y && ball.y < leftPaddle.y + leftPaddle.height){
+        ball.speedY *= -1;
+
+    }
+   
+   
+  
 }
 
  
